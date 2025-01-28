@@ -39,7 +39,6 @@ RSpec.describe "Matches", type: :request do
     it "creates a new match" do
       expect {
         post matches_path, params: { match: valid_attrs }
-        puts response.body
       }.to change(Match, :count).by(1)
 
       expect(response).to have_http_status(:created)
