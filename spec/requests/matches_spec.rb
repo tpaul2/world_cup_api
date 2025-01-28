@@ -18,9 +18,12 @@ RSpec.describe "Matches", type: :request do
   end
 
   describe "POST /matches" do
+    let!(:home_team) { Team.create!(abbreviation: "USA") }
+    let!(:away_team) { Team.create!(abbreviation: "BRA") }
+
     let(:valid_attrs) {
       { home_country_name: "USA",
-        away_country_name: "ARG",
+        away_country_name: "BRA",
         home_score: 20,
         home_penalty: nil,
         away_score: 10,
@@ -36,6 +39,7 @@ RSpec.describe "Matches", type: :request do
     it "creates a new match" do
       expect {
         post matches_path, params: { match: valid_attrs }
+        puts response.body
       }.to change(Match, :count).by(1)
 
       expect(response).to have_http_status(:created)
@@ -54,7 +58,7 @@ RSpec.describe "Matches", type: :request do
         }.to_not change(Match, :count)
 
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.body).to include("\"home_country_name\":[\"can't be blank\"]")
+        expect(response.body).to include("One or both teams could not be found.")
       end
     end
   end
