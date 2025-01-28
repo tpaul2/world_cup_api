@@ -49,4 +49,3 @@ match_csv.each do |row|
     puts "Could not find teams for match: #{row.inspect}"
   end
 end
- 
