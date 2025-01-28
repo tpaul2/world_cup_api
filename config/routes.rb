@@ -8,12 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :teams, except: [:create, :destroy, :index, :new] do
+  resources :teams, except: [:create, :destroy, :index, :new, :edit] do
     member do
       get :home_matches
       get :away_matches
     end
   end
 
-  resources :matches, only: [:create, :edit, :index, :new, :show, :update]
+  resources :matches, only: [:create, :index, :show, :update]
 end
