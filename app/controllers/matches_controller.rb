@@ -5,7 +5,7 @@ class MatchesController < ApplicationController
   def index
     @matches = Match.all
 
-    render json: @matches
+    render json: { all_matches: @matches }
   end
 
   # GET /matches/1

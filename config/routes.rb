@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # This allows for user-readable routing for home/away matches
-  resources :teams, except: [ :create, :destroy, :index, :new, :edit ] do
+  resources :teams, except: [ :create, :destroy, :new, :edit ] do
     member do
       get :home_matches
       get :away_matches

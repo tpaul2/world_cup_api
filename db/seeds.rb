@@ -17,7 +17,7 @@ team_csv.each do |row|
   t = Team.new
   t.country = row['team']
   t.abbreviation = row['team_code']
-  t.team_association = row['team_association']
+  t.team_association = row['association']
   t.save
 end
 
