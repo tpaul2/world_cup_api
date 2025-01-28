@@ -9,11 +9,11 @@ class TeamsController < ApplicationController
   # GET /teams/1/home_matches
   def home_matches
     home_matches = @team.home_matches
-    
+
     if home_matches.any?
       render json: home_matches
     else
-      render json: { error: "No home matches found for this team."}, status: :not_found
+      render json: { error: "No home matches found for this team." }, status: :not_found
     end
   end
 
@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
     if away_matches.any?
       render json: away_matches
     else
-      render json: { error: "No away matches found for this team."}, status: :not_found
+      render json: { error: "No away matches found for this team." }, status: :not_found
     end
   end
 

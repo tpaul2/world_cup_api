@@ -1,7 +1,9 @@
 class Match < ApplicationRecord
-  belongs_to :home_country, class_name: "Team", foreign_key: 'home_country_id', optional: true
-  belongs_to :away_country, class_name: "Team", foreign_key: 'away_country_id', optional: true
+  # this establishes the relationship between the team(country) & match
+  belongs_to :home_country, class_name: "Team", foreign_key: "home_country_id", optional: true
+  belongs_to :away_country, class_name: "Team", foreign_key: "away_country_id", optional: true
 
+  # since match creation is allowed, we want to validate the incoming data before it is persisted to the db
   validates :home_country_name, presence: true
   validates :away_country_name, presence: true
   validates :home_score, presence: true, numericality: true

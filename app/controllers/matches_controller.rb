@@ -41,6 +41,6 @@ class MatchesController < ApplicationController
   end
 
   def match_params
-    params.expect(match: [:home_country_name, :away_country_name, :home_score, :home_penalty, :away_score, :away_penalty, :attendance, :venue, :round, :date, :host, :year])
+    params.expect(match: [ :home_country_name, :away_country_name, :home_score, :home_penalty, :away_score, :away_penalty, :attendance, :venue, :round, :date, :host, :year ])
   end
 end
