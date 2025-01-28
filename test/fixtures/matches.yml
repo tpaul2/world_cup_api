@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_score: 1
+  home_penalty: 1
+  away_score: 1
+  away_penalty: 1
+  attendance: 1
+  venue: MyString
+  round: MyString
+  date: 2025-01-27
+  host: MyString
+  year: 1
+
+two:
+  home_score: 1
+  home_penalty: 1
+  away_score: 1
+  away_penalty: 1
+  attendance: 1
+  venue: MyString
+  round: MyString
+  date: 2025-01-27
+  host: MyString
+  year: 1
