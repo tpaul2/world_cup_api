@@ -2,8 +2,6 @@
 
 This is a lightweight Rails API that serves World Cup data. 
 
-Things you may want to cover:
-
 * Ruby version
 `ruby 3.3.6`
 * Rails version
