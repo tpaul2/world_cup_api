@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'json'
-require 'byebug'
 
 RSpec.describe "Matches", type: :request do
   describe "GET /matches" do

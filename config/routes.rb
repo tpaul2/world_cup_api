@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  # This allows for user-readable routing for home/away matches
+  # This allows for user-readable routing for home/away matches by team/country
   resources :teams, except: [ :create, :destroy, :new, :edit ] do
     member do
       get :home_matches

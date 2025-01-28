@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: %i[ show home_matches away_matches ]
 
-  # GET /teams - added to list teams/countries with ID - in order to update list of matches associated with team/country it must be done with home/away country ID
+  # GET /teams - added to list teams/countries with ID
   def index
     @teams = Team.all
 

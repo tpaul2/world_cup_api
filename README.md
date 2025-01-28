@@ -14,3 +14,9 @@ Endpoints:
 `ruby 3.3.6`
 * Rails version
 `Rails 8.0.1`
+
+* Run team specs
+`bundle exec rspec interview/world_cup_api/spec/requests/teams_spec.rb`
+
+* Run match specs
+`bundle exec rspec interview/world_cup_api/spec/requests/matches_spec.rb`
